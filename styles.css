@@ -8,6 +8,356 @@
 }
 
 :root {
-    --main-blue: #219ebc;
-    --bright-orange: #fdc500;
+    --main-blue: #1992d4;
+    --bright-orange: #f0b429;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, max(200px, 20%));
+    grid-template-rows: repeat(5, 1fr);
+    /* height: 100vh; */
+}
+
+
+
+header {
+    grid-area: 1 / 2 / 2 / 6;
+    padding: 1.5rem 3.5rem 1rem;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    row-gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+nav {
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
+    background-color: var(--main-blue);
+    color: white;
+}
+
+main {
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
+}
+
+li {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 500;
+    gap: 10px;
+    padding: .5rem 0rem .5rem 1rem;
+}
+
+li:hover {
+    background-color: #1a8aa6;
+}
+
+li > img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.full-logo {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.full-logo > img {
+    height: 2.8rem;
+    width: 2.8rem;
+}
+
+.section-one {
+    margin-bottom: 50px;
+}
+
+.search {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.side-nav {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.user {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.btns {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+input {
+    appearance: none;
+}
+
+.search > img, .side-nav > img {
+    height: 1.5rem;
+    width: 1.5rem;
+} 
+
+.search {
+    display: flex;
+    align-items: center;
+}
+.side-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.search > img {
+    margin-right: 20px;
+}
+.search > input {
+    width: 75%;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(211, 211, 211, 0.516)    ;
+}
+.search > input:hover {
+    background-color: #D3D3D3;
+}
+.side-nav > img + img {
+    height: 2.2rem;
+    width: 2.2rem;
+    margin-left: 20px;
+}
+.side-nav > p {
+    margin-left: 20px;
+}
+
+
+.user {
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+}
+
+.user > img {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 20px;
+}
+
+.welcome > p + p {
+    font-size: 1.5rem;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--main-blue);
+    color: white;
+    height: 2.3rem;
+    width: 5.5rem;
+    font-weight: 500;
+}
+.btns {
+    display: flex;
+    align-items: center;
+}
+.btns >  button + button, .btns > button + button + button {
+    margin-left: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 4fr 4fr 3fr;
+    grid-template-rows: repeat(18, 1fr);
+}
+
+.projects {
+    grid-column: 1 / 3;
+    grid-row: 1 / 19;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(16, 1fr);
+    gap: 15px;
+    padding: 2rem 1rem;
+    background-color: rgba(211, 211, 211, 0.516);
+}
+
+.announcements {
+    grid-column: 3 / 4;
+    grid-row: 1 / 10;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    padding: 2rem 1rem;
+    background-color: rgba(211, 211, 211, 0.516);
+}
+
+.trending {
+    grid-column: 3 / 4;
+    grid-row: 10 / 19;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    padding: 1rem 1rem 2rem;
+    background-color: rgba(211, 211, 211, 0.516);
+}
+
+.project-title {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    font-size: 1.3rem;
+}
+
+.announcements-title, .trending-title {
+    font-size: 1.3rem;
+    grid-row: 1 / 2;
+}
+.box, .t-box {
+    grid-row: 2 / 11;
+}
+
+.item1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 7;
+}
+.item2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 7;
+}
+.item3 {
+    grid-column: 1 / 2;
+    grid-row: 7 / 12;
+}
+.item4 {
+    grid-column: 2 / 3;
+    grid-row: 7 / 12;
+}
+.item5 {
+    grid-column: 1 / 2;
+    grid-row: 12 / 17;
+}
+.item6 {
+    grid-column: 2 / 3;
+    grid-row: 12 / 17;
+}
+
+.project-icons > img {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 20px;
+}
+
+.card {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    border-left: 8px solid var(--bright-orange);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.card > div > p:first-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.box > div > p:first-child {
+    font-weight: 700;
+}
+
+.card > div > p:nth-child(2), .box > div > p:nth-child(2), .secondary > p:nth-child(2) {
+    font-size: 0.9rem;
+    color: #636363;
+}
+
+.secondary > p:first-child {
+    margin-bottom: 2px;
+}
+
+.project-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.card:hover, .project-icons > img:hover {
+    transform: translate(-1%, -2%);
+}
+
+.box {
+    padding: .5rem 1rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+.t-box {
+    padding: .5rem 1rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+.t-inner-box {
+    display: flex;
+    align-items: center;
+}
+
+.aitem1, .aitem2 {
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.box > div {
+    padding: 1rem 0px;
+}
+
+.box > div:hover {
+    font-weight: 500;
+}
+
+.t-inner-box > img {
+    height: 2.8rem;
+    width: 2.8rem;
+    margin-right: 15px;
+}
+
+.side-nav > img:first-child:hover {
+    animation: bell-ring 200ms linear;
+    animation-iteration-count: 3;
+}
+
+@keyframes bell-ring {
+    0% {
+        transform: translateX(0%);
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: translateX(-3%);
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: translateX(0%);
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: translateX(3%);
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: translateX(0%);
+        transform: rotate(0deg);
+    }
+}
+
